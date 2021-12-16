@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Backend\Modules\Example\Domain\Example\ExampleRepository:
+  Backend\Modules\Example\Domain\Example\Command\CreateExampleHandler:
+  Backend\Modules\Example\Domain\Example\Command\DeleteExampleHandler:
+  Backend\Modules\Example\Domain\Example\Command\UpdateExampleHandler:

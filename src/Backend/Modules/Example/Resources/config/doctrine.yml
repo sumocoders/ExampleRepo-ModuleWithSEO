@@ -1,0 +1,12 @@
+doctrine:
+  dbal:
+    types:
+      example_status: Backend\Modules\Example\Domain\Example\Status\StatusDBALType
+  orm:
+    mappings:
+      Event:
+        type: annotation
+        is_bundle: false
+        dir: "%kernel.project_dir%/src/Backend/Modules/Example/Domain/Example"
+        alias: Example
+        prefix: Backend\Modules\Example\Domain\Event
