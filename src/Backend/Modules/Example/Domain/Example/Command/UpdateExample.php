@@ -14,24 +14,12 @@ final class UpdateExample extends ExampleDataTransferObject
     public function __construct(Example $example)
     {
         $this->example = $example;
-
+        $this->status = $example->getStatus();
+        $this->visible = $example->isVisible();
+        $this->sequence = $example->getSequence();
         $this->title = $example->getTitle();
         $this->meta = $example->getMeta();
-        $this->image = $example->getImage();
-        $this->categories = $example->getCategories();
-        $this->text = $example->getText();
-        $this->embedText = $example->getEmbedText();
-        $this->startDate = $example->getStartDate();
-        $this->endDate = $example->getEndDate();
-        $this->onlyShowStartDate = $example->onlyShowStartDate();
-        $this->location = $example->getLocation();
-        $this->price = $example->getPrice();
-        $this->discountForMembers = $example->getDiscountForMembers();
-        $this->ticketLink = $example->getTicketLink();
-        $this->tags = TagsModel::getTags('Example', $example->getId());
-        $this->facebookLink = $example->getFacebookLink();
-        $this->nlExample = $example->isNlExample();
-        $this->nlLink = $example->getNlLink();
+        $this->description = $example->getDescription();
     }
 
     public function getExample(): Example
