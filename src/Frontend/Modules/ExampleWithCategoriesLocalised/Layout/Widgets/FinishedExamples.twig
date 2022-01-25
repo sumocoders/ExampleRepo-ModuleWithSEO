@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>{{ 'lbl.FinishedExamples'|trans }}</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="event-list">
+      {% for example in examples %}
+        <li>
+         {{ example.title }}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
